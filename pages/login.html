@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My First Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+  <h1>Welcome to my website!</h1>
+  <p>please log in:</p>
+  <div>
+    <p>Username:</p>
+    <label for="usernameInput"></label><input type="text" name="username" id="usernameInput"><br>
+    <p>Password:</p>
+    <label for="passwordInput"></label><input type="text" name="password" id="passwordInput"><br>
+  </div>
+  <div>
+    <input type="button" onclick="login()" value="Login">
+  </div>
+  <script src="../scripts/login.js"></script>
+</body>
+</html>
