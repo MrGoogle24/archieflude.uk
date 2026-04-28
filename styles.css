@@ -1,5 +1,30 @@
-.h1 {
-    font-family: Verdana, monospace;
+h1 {
+    font-family: "Comic Sans MS", cursive;
     text-align: center;
-    color: aliceblue;
+    color: red;
+}
+h2 {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: orange;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: yellow;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: green;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: blue;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: purple;
 }
