@@ -13,3 +13,10 @@ p {
 a {
     color: #00FF00;
 }
+
+label {
+    color: #777;
+}
+input {
+    background-color: #999;
+}
