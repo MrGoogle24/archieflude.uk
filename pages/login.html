@@ -4,20 +4,14 @@
   <meta charset="UTF-8">
   <title>My First Webpage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
-  <h1>Welcome to my website!</h1>
-  <p>please log in:</p>
+  <h1>Please enter your username and password!</h1>
   <div>
-    <p>Username:</p>
-    <label for="usernameInput"></label><input type="text" name="username" id="usernameInput"><br>
-    <p>Password:</p>
-    <label for="passwordInput"></label><input type="text" name="password" id="passwordInput"><br>
+    <form action="../scripts/login.js" method="POST">
+      
+    </form>
   </div>
-  <div>
-    <input type="button" onclick="login()" value="Login">
-  </div>
-  <script src="../scripts/login.js"></script>
 </body>
 </html>
