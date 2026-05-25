@@ -1,0 +1,43 @@
+body {
+    background-color: #0f172a;
+}
+
+h1 {
+    color: #3b82f6;
+}
+
+p {
+    color: #3b82f6;
+}
+
+a {
+    color: #22c55e;
+}
+
+label {
+    color: #3b82f6;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b1326;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: #3b82f6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #091124;
+}
