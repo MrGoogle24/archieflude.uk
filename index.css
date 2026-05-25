@@ -13,3 +13,8 @@ p {
 a {
     color: #22c55e;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
