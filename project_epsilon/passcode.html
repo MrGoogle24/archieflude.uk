@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passcode</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .keypad {
+            width: 220px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #display {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            background: #071007;
+            border: 1px solid #00ff66;
+            color: #00ff66;
+            text-align: right;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            background: transparent;
+            border: 1px solid #00ff66;
+            color: #00ff66;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00ff66;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you even have the knowledge?</h1>
+<div class="keypad">
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+
+        <button onclick="backspace()">⌫</button>
+        <button onclick="press('0')">0</button>
+        <button onclick="clearAll()">C</button>
+
+        <button onclick="submit()">↵</button>
+    </div>
+</div>
+
+<div hidden id="nextClue">
+    <a href="information%20will%20set%20you%20free.html">The Epsilon Project.txt</a>
+</div>
+
+<script>
+    let display = document.getElementById("display");
+    let nextClue = document.getElementById("nextClue");
+
+    function press(num) {
+        display.value += num;
+    }
+
+    function backspace() {
+        display.value = display.value.slice(0, -1);
+    }
+
+    function clearAll() {
+        display.value = "";
+    }
+
+    function submit() {
+        if (display.value === "6578") {
+            nextClue.hidden = false;
+        }
+    }
+</script>
+</body>
+</html>
