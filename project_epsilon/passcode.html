@@ -46,7 +46,7 @@
 <body>
 <h1>Do you even have the knowledge?</h1>
 <div class="keypad">
-    <input type="text" id="display" readonly />
+    <label for="display"></label><input id="display" readonly type="text"/>
 
     <div class="buttons">
         <button onclick="press('1')">1</button>
@@ -73,9 +73,14 @@
     <a href="information%20will%20set%20you%20free.html">The Epsilon Project.txt</a>
 </div>
 
+<div hidden id="finalClue">
+    <a href="none%20of%20this%20should%20have%20happened.html">The Truth Shall Set You Free</a>
+</div>
+
 <script>
     let display = document.getElementById("display");
     let nextClue = document.getElementById("nextClue");
+    let finalClue = document.getElementById("finalClue");
 
     function press(num) {
         display.value += num;
@@ -92,6 +97,9 @@
     function submit() {
         if (display.value === "6578") {
             nextClue.hidden = false;
+        }
+        if (display.value === "4828") {
+            finalClue.hidden = false;
         }
     }
 </script>
