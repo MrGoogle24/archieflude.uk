@@ -1,0 +1,129 @@
+/* =========================
+   Green + Black Theme CSS
+   ========================= */
+
+:root {
+    --bg: #050805;
+    --panel: #0b120b;
+    --text: #c8ffd0;
+    --muted: #6aa86f;
+    --accent: #00ff66;
+    --accent-dark: #00b347;
+    --border: #1a2a1a;
+    --shadow: rgba(0, 255, 102, 0.15);
+    --danger: #ff3b3b;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-dark);
+    text-shadow: 0 0 8px var(--shadow);
+}
+
+/* Containers */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 20px var(--shadow);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-dark);
+    box-shadow: 0 0 30px var(--shadow);
+}
+
+/* Buttons */
+button, .btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 15px var(--shadow);
+}
+
+/* Inputs */
+input, textarea {
+    background: #071007;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+/* Navbar */
+nav {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--shadow);
+}
+
+/* Utility */
+.glow {
+    text-shadow: 0 0 10px var(--accent);
+}
+
+.border-glow {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 12px var(--shadow);
+}
+
+.hidden {
+    display: none;
+}
