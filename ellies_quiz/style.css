@@ -70,6 +70,15 @@ body {
 .wave-text span:nth-child(19) {
     animation-delay: 3.6s;
 }
+.wave-text span:nth-child(20) {
+    animation-delay: 3.8s;
+}
+.wave-text span:nth-child(21) {
+    animation-delay: 4.0s;
+}
+.wave-text span:nth-child(22) {
+    animation-delay: 4.2s;
+}
 
 @keyframes wave {
     0%, 100% {
