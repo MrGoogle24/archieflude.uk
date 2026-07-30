@@ -20,6 +20,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #0b1326;
+    font-size: 3vw;
 }
 
 ul li {
@@ -32,6 +33,7 @@ ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 4vw;
 }
 
 ul li a:hover {
