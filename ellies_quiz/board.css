@@ -1,0 +1,38 @@
+
+.board-themes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #474D82;
+    padding: 10px;
+}
+.board-themes div {
+    background-color: #666A92;
+    border: 1px solid black;
+    font-size: 5vh;
+    font-family: "rockwell";
+    color: #474D82;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: #474D82;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.container div {
+    background-color: #666A92;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 10vh;
+    font-family: "rockwell";
+    color: #474D82;
+    text-align: center;
+}
+
+body {
+    background-color:  	#4b495c;
+}
