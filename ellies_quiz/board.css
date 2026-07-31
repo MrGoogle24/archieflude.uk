@@ -33,6 +33,36 @@
     text-align: center;
 }
 
+.container button {
+    background-color: #666A92;
+    border: 0px solid black;
+    padding: 10px;
+    font-size: 10vh;
+    font-family: "rockwell";
+    color: #474D82;
+    text-align: center;
+}
+
+.question-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #474D82;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.question-container div {
+    background-color: #474D82;
+    border: 1px solid white;
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     background-color:  	#4b495c;
 }
