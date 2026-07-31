@@ -1,0 +1,19 @@
+{
+  "name": "archieflude-uk",
+  "compatibility_date": "2026-07-31",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "PLAYERS_KV",
+      "id": "f41d9af6a88843109b24634ea32246c7"
+    }
+  ]
+}
