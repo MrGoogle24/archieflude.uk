@@ -5,7 +5,8 @@ async function enterName() {
         headers: {"content-type": "application/json"},
         body: JSON.stringify({ "name": name, "points": 0 }),
     });
-    console.log(res.json())
+    const data = await res.json();
+    console.log(data)
 }
 
 window.enterName = enterName;
