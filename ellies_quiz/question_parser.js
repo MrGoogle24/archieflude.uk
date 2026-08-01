@@ -6,7 +6,7 @@ import theme_5 from './theme_5.json' with {type: 'json'};
 import theme_6 from './theme_6.json' with {type: 'json'};
 
 let x = 0;
-let y = 0;
+
 
 let current_theme = 0;
 let current_x = 0;
@@ -86,30 +86,3 @@ document.addEventListener('keydown', function(event) {
 })
 
 window.showQuestion = showQuestion;
-
-// DEBUG FUNCTIONS!
-
-function changeState() {
-    questions[x][y].answered = !theme_1[0].answered;
-    loadQuestions();
-}
-
-function nextQuestionSameTheme() {
-    y += 1
-    loadQuestions();
-}
-
-function nextQuestionDifferentTheme() {
-    x += 1
-    loadQuestions();
-}
-
-function prevQuestionSameTheme() {
-    y -= 1
-    loadQuestions();
-}
-
-function prevQuestionDifferentTheme() {
-    x -= 1
-    loadQuestions();
-}
