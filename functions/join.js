@@ -6,7 +6,7 @@ export async function onRequestPost(context) {
     let player = await env.PLAYERS_KV.get(key, { type: "json" });
 
     if (!player) {
-        player = { "name": name, "points": 0 };
+        player = { "name": name, "points": 0, "buzzedAt": null };
         await env.PLAYERS_KV.put(key, JSON.stringify(player));
     }
 
