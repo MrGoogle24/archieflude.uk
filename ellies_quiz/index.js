@@ -6,6 +6,9 @@ async function enterName() {
         body: JSON.stringify({ "name": name, "points": 0 }),
     });
     const data = await res.json();
+
+    window.location.href = `player.html?name=${encodeURIComponent(data.name)}`;
+
     console.log(data)
 }
 
