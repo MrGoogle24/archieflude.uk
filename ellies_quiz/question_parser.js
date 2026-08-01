@@ -11,9 +11,21 @@ let y = 0;
 let current_theme = 0;
 let current_x = 0;
 
+const pointValues = [100, 200, 400, 800, 1000, 2000];
+
+async function setQuestionValue(x) {
+    const value = pointValues[x];
+    await fetch('/admin/set-question-value', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ value })
+    });
+}
+
 function showQuestion(x, theme) {
     current_x = x
     current_theme = theme;
+    setQuestionValue(x);
     const el = document.getElementsByClassName("question-container")[0];
     console.log(x, theme);
     if (el.style.visibility === "hidden") {

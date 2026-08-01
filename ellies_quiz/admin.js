@@ -37,6 +37,32 @@ async function clearBuzzer() {
     loadBuzzStatus();
 }
 
+async function awardWinner() {
+    const buzzRes = await fetch('/admin/buzz-status');
+    const buzzed = await buzzRes.json();
+
+    if (buzzed.length === 0) {
+        alert('No one has buzzed in yet!');
+        return;
+    }
+
+    const winner = buzzed[0]; // fastest buzzer
+
+    const valueRes = await fetch('/admin/get-question-value');
+    const { value } = await valueRes.json();
+
+    const addRes = await fetch('/admin/add-points', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: winner.name, amount: value })
+    });
+
+    const updatedPlayer = await addRes.json();
+    console.log(`Awarded ${value} points to:`, updatedPlayer);
+}
+
+window.awardWinner = awardWinner;
+
 window.clearBuzzer = clearBuzzer;
 
 setInterval(loadBuzzStatus, 100);
