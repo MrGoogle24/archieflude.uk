@@ -1,4 +1,4 @@
-export async function onRequestGet(context) {
+export async function onRequestPost(context) {
     const { request, env } = context;
     const { name } = await request.json();
     const key = name.toLowerCase();
