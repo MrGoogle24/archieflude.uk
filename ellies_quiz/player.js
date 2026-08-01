@@ -25,7 +25,7 @@ async function buzzerPressed() {
     const player = await res.json();
 
     document.getElementById('buzzStatus').textContent = "BUZZED IN!!!!";
-    document.getElementById('buzzPlayer').disabled = true;
+    document.getElementById('buzzButton').disabled = true;
 }
 
 window.buzzerPressed = buzzerPressed;
