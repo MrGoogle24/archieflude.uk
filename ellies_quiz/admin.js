@@ -18,5 +18,27 @@ async function addPoints(name, amount) {
     return updatedPlayer;
 }
 
-// test
-addPoints("Archie", 1);
+async function loadBuzzStatus() {
+    const res = await fetch('/admin/buzz-status');
+    const buzzed = await res.json();
+
+    const list = document.getElementById("buzzList")
+    list.innerHTML = "";
+
+    buzzed.forEach(player => {
+        const li = document.createElement("li");
+        li.textContent = `${player.name} (${player.points} points)`;
+        list.appendChild(li);
+    });
+}
+
+async function clearBuzzer() {
+    await fetch('/admin/clear-buzzer', {method: 'POST'});
+    loadBuzzStatus();
+}
+
+window.clearBuzzer = clearBuzzer;
+
+setInterval(loadBuzzStatus, 100);
+
+loadBuzzStatus();
