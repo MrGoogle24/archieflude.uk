@@ -19,7 +19,7 @@ async function loadPlayerStatus() {
 }
 
 loadPlayerStatus();
-setInterval(loadPlayerStatus, 2000); // TESTING: change to 500 before the actual quiz
+setInterval(loadPlayerStatus, 750); // TESTING: change to 500 before the actual quiz
 
 async function buzzerPressed() {
     const res = await fetch('/buzz', {
