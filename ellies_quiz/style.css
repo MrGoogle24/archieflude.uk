@@ -3,8 +3,8 @@ body {
     height: 100vh;
     margin: 0;
     padding: 2vw;
-    background: #101010;
-    color: #fff;
+    background: #37734E;
+    color: #F4F9F5;
     font-family: 'Arial', sans-serif;
 }
 
@@ -80,6 +80,24 @@ body {
 }
 .wave-text span:nth-child(22) {
     animation-delay: 4.2s;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+p {
+    font-size: 3vw;
+}
+
+input {
+    background: #F4F9F5;
+    font-size: 5vw;
+}
+button {
+    background-color: #BBB;
+    color: #F4F9F5;
+    font-size: 5vw;
 }
 
 @keyframes wave {
