@@ -1,14 +1,38 @@
 [
   {
-    "question": "test question!",
-    "correct_answer": "test123",
-    "value": 32,
+    "question": "7",
+    "correct_answer": "yes the answer really was 7",
+    "value": 100,
     "answered": false
   },
   {
-    "question": "test question 2!",
-    "correct_answer": "test123!",
-    "value": 64,
+    "question": "Blind Guess 10 seconds",
+    "correct_answer": "Winner",
+    "value": 200,
+    "answered": false
+  },
+  {
+    "question": "Name him",
+    "correct_answer": "Archie's Favourite Answer Wins",
+    "value": 400,
+    "answered": false
+  },
+  {
+    "question": "Don't Press the Buzzer! (but you only have 10 seconds!)",
+    "correct_answer": "But 3rd Place gets points",
+    "value": 800,
+    "answered": false
+  },
+  {
+    "question": "Hide the phone",
+    "correct_answer": "Winner",
+    "value": 1000,
+    "answered": false
+  },
+  {
+    "question": "Rock Paper Scissors",
+    "correct_answer": "Winner gets 2000 points",
+    "value": 2000,
     "answered": false
   }
 ]

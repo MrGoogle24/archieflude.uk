@@ -3,13 +3,12 @@ import theme_2 from './theme_2.json' with {type: 'json'};
 import theme_3 from './theme_3.json' with {type: 'json'};
 import theme_4 from './theme_4.json' with {type: 'json'};
 import theme_5 from './theme_5.json' with {type: 'json'};
-import theme_6 from './theme_6.json' with {type: 'json'};
 
 let x = 0;
 
-
 let current_theme = 0;
 let current_x = 0;
+let current_button = null; // track which button is currently active
 
 const pointValues = [100, 200, 400, 800, 1000, 2000];
 
@@ -22,9 +21,10 @@ async function setQuestionValue(x) {
     });
 }
 
-function showQuestion(x, theme) {
+function showQuestion(button, x, theme) {
     current_x = x
     current_theme = theme;
+    current_button = button; // remember which button triggered this
     setQuestionValue(x);
     const el = document.getElementsByClassName("question-container")[0];
     console.log(x, theme);
@@ -73,9 +73,13 @@ function showAnswer(x, theme) {
         case 5:
             document.getElementById("question").innerHTML = theme_5[current_x].correct_answer;
             break;
-        case 6:
-            document.getElementById("question").innerHTML = theme_6[current_x].correct_answer;
-            break;
+    }
+
+    // grey out and disable the button now that it's been answered
+    if (current_button) {
+        current_button.disabled = true;
+        current_button.style.backgroundColor = "#555";
+        current_button.style.color = "#999";
     }
 }
 
@@ -84,5 +88,12 @@ document.addEventListener('keydown', function(event) {
         showAnswer(x, current_theme)
     }
 })
+
+function closeQuestion() {
+    const el = document.getElementsByClassName("question-container")[0];
+    el.style.visibility = "hidden";
+}
+
+window.closeQuestion = closeQuestion;
 
 window.showQuestion = showQuestion;

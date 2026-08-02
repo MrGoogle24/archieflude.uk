@@ -1,14 +1,38 @@
 [
   {
-    "question": "test question!",
-    "correct_answer": "test123",
-    "value": 32,
+      "question": "KC LOB",
+    "correct_answer": "BLOCK",
+    "value": 100,
     "answered": false
   },
   {
-    "question": "test question 2!",
-    "correct_answer": "test123!",
-    "value": 64,
+    "question": "KITSR",
+    "correct_answer": "SKIRT",
+    "value": 200,
+    "answered": false
+  },
+  {
+    "question": "BNTOTU",
+    "correct_answer": "BUTTON",
+    "value": 400,
+    "answered": false
+  },
+  {
+    "question": "RMOUFIN",
+    "correct_answer": "UNIFORM",
+    "value": 800,
+    "answered": false
+  },
+  {
+    "question": "SURREPSE",
+    "correct_answer": "PRESSURE",
+    "value": 1000,
+    "answered": false
+  },
+  {
+    "question": "CLNEOIRESTC",
+    "correct_answer": "ELECTRONICS",
+    "value": 2000,
     "answered": false
   }
 ]

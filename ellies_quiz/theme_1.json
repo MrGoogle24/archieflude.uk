@@ -1,14 +1,38 @@
 [
   {
-    "question": "test question!",
-    "correct_answer": "test123",
-    "value": 32,
+    "question": "What town are you moving into?",
+    "correct_answer": "Pelican Town",
+    "value": 100,
     "answered": false
   },
   {
-    "question": "test question 2!",
-    "correct_answer": "test123!",
-    "value": 64,
+    "question": "How many days are in a season?",
+    "correct_answer": "28",
+    "value": 200,
+    "answered": false
+  },
+  {
+    "question": "What seeds are you given on your first day?",
+    "correct_answer": "Parsnip Seeds",
+    "value": 400,
+    "answered": false
+  },
+  {
+    "question": "What's the name of the blue supermarket-esque shop?",
+    "correct_answer": "Joja Mart",
+    "value": 800,
+    "answered": false
+  },
+  {
+    "question": "What's the name of the small green \"forest spirits\"?",
+    "correct_answer": "Junimos",
+    "value": 1000,
+    "answered": false
+  },
+  {
+    "question": "Who is the only female marriage candidate to hate the universally-loved \"Prismatic Shard\"?",
+    "correct_answer": "Hayley",
+    "value": 2000,
     "answered": false
   }
 ]

@@ -1,14 +1,38 @@
 [
   {
-    "question": "test question!",
-    "correct_answer": "test123",
-    "value": 32,
+    "question": "what caused the lockdown in 2020",
+    "correct_answer": "covid",
+    "value": 100,
     "answered": false
   },
   {
-    "question": "this is theme 4!",
-    "correct_answer": "YES!",
-    "value": 64,
+    "question": "5% can be known as what as a fraction?",
+    "correct_answer": "A twentieth",
+    "value": 200,
+    "answered": false
+  },
+  {
+    "question": "What is the name of the shortened format of cricket with 20 overs per side?",
+    "correct_answer": "Twenty20",
+    "value": 400,
+    "answered": false
+  },
+  {
+    "question": "What island living game released by nintendo was released in 2020 and took off with covid?",
+    "correct_answer": "Animal Crossing: New Horizons",
+    "value": 800,
+    "answered": false
+  },
+  {
+    "question": "What is the name of the 3D shape with 20 sides?",
+    "correct_answer": "Icosahedron",
+    "value": 1000,
+    "answered": false
+  },
+  {
+    "question": "What song released by Nelly Futardo was the #1 song on this day in 2006?",
+    "correct_answer": "Promiscuous",
+    "value": 2000,
     "answered": false
   }
 ]
