@@ -14,7 +14,7 @@ async function loadPlayerStatus() {
 
     if (!data.hasBuzzed) {
         document.getElementById('buzzButton').disabled = false;
-        document.getElementById('buzzStatus').textContent = '';
+        document.getElementById("buzzButton").textContent = 'BUZZ IN!!!!';
     }
 }
 
@@ -30,7 +30,7 @@ async function buzzerPressed() {
 
     const player = await res.json();
 
-    document.getElementById('buzzStatus').textContent = "BUZZED IN!!!!";
+    document.getElementById("buzzButton").textContent = "BUZZED IN!!!!";
     document.getElementById('buzzButton').disabled = true;
 }
 
