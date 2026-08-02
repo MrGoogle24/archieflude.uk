@@ -6,14 +6,20 @@ function getPlayerNameFromURL() {
 const playerName = getPlayerNameFromURL();
 document.getElementById("hello").innerHTML = `Welcome, ${playerName}`;
 
-async function loadPlayerData() {
-    const res = await fetch(`/player-data?name=${encodeURIComponent(playerName)}`);
-    const player = await res.json();
-    document.getElementById("points").innerHTML = player.points;
+async function loadPlayerStatus() {
+    const res = await fetch(`/player-status?name=${encodeURIComponent(playerName)}`);
+    const data = await res.json();
+
+    document.getElementById("points").innerHTML = data.player.points;
+
+    if (!data.hasBuzzed) {
+        document.getElementById('buzzButton').disabled = false;
+        document.getElementById('buzzStatus').textContent = '';
+    }
 }
 
-
-loadPlayerData();
+loadPlayerStatus();
+setInterval(loadPlayerStatus, 2000); // TESTING: change to 500 before the actual quiz
 
 async function buzzerPressed() {
     const res = await fetch('/buzz', {
@@ -28,17 +34,4 @@ async function buzzerPressed() {
     document.getElementById('buzzButton').disabled = true;
 }
 
-setInterval(async () => {
-    const res = await fetch('/admin/buzz-status');
-    const queue = await res.json();
-
-    const hasBuzzed = queue.find(entry => entry.name.toLowerCase() === playerName.toLowerCase());
-
-    if (!hasBuzzed) {
-        document.getElementById('buzzButton').disabled = false;
-        document.getElementById('buzzStatus').textContent = '';
-    }
-}, 2000); // TESTING: 2000ms — change to 500 before the actual quiz
-
 window.buzzerPressed = buzzerPressed;
-
