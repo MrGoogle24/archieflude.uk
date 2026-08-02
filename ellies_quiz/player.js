@@ -28,15 +28,17 @@ async function buzzerPressed() {
     document.getElementById('buzzButton').disabled = true;
 }
 
-window.buzzerPressed = buzzerPressed;
-
 setInterval(async () => {
-    const res = await fetch(`/player-data?name=${encodeURIComponent(playerName)}`);
-    const player = await res.json();
+    const res = await fetch('/admin/buzz-status');
+    const queue = await res.json();
 
-    if (!player.buzzedAt) {
+    const hasBuzzed = queue.find(entry => entry.name.toLowerCase() === playerName.toLowerCase());
+
+    if (!hasBuzzed) {
         document.getElementById('buzzButton').disabled = false;
         document.getElementById('buzzStatus').textContent = '';
     }
-}, 100);
+}, 2000); // TESTING: 2000ms — change to 500 before the actual quiz
+
+window.buzzerPressed = buzzerPressed;
 

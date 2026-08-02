@@ -65,6 +65,6 @@ window.awardWinner = awardWinner;
 
 window.clearBuzzer = clearBuzzer;
 
-setInterval(loadBuzzStatus, 100);
+setInterval(loadBuzzStatus, 2000); // TESTING: 2000ms — change to 500 before the actual quiz
 
 loadBuzzStatus();

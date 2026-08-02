@@ -1,17 +1,13 @@
 export async function onRequestPost(context) {
     const { request, env } = context;
     const { name } = await request.json();
-    const key = name.toLowerCase();
 
-    const player = await env.PLAYERS_KV.get(key, { type: "json" });
-    if (!player) {
-        return new Response(JSON.stringify({ error: "Player Not Found" }), { status: 404 });
+    let queue = await env.PLAYERS_KV.get("buzz_queue", { type: "json" }) || [];
+
+    if (!queue.find(entry => entry.name.toLowerCase() === name.toLowerCase())) {
+        queue.push({ name, time: Date.now() });
+        await env.PLAYERS_KV.put("buzz_queue", JSON.stringify(queue));
     }
 
-    if (!player.buzzedAt) {
-        player.buzzedAt = Date.now();
-        await env.PLAYERS_KV.put(key, JSON.stringify(player));
-    }
-
-    return Response.json(player)
+    return Response.json(queue);
 }
