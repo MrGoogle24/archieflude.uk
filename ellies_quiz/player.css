@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background-color: #37734e;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#hello {
+    font-size: 8vw;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+#points {
+    font-size: 6vw;
+    font-weight: bold;
+    background-color: #004242;
+    color: #367588; /* soft green to read as a "score" accent, still fits palette */
+    padding: 12px 32px;
+    border-radius: 16px;
+    margin: 0 0 40px 0;
+}
+
+#buzzButton {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 50%;
+    width: 65vw;
+    height: 65vw;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    box-shadow: 0 8px 0 #990000, 0 12px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#buzzButton img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+#buzzButton:active {
+    transform: translateY(8px);
+    box-shadow: 0 0 0 #474d82, 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#buzzButton:disabled {
+    background-color: #444;
+    box-shadow: 0 8px 0 #222 , 0 12px 20px rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+#buzzButton:disabled:active {
+    transform: none;
+}
+
+#buzzStatus {
+    font-size: 6vw;
+    font-weight: bold;
+    color: #6a6fba;
+    margin-top: 32px;
+    min-height: 8vw; /* reserves space so layout doesn't jump when text appears/disappears */
+}
