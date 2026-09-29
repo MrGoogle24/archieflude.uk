@@ -1,0 +1,22 @@
+[
+  { "id": "v_ext01", "front": "学校", "back": "Gakkou (School)", "video": "videos/school.mp4", "type": "vocab" },
+  { "id": "v_ext02", "front": "先生", "back": "Sensei (Teacher)", "video": "videos/teacher.mp4", "type": "vocab" },
+  { "id": "v_ext03", "front": "学生", "back": "Gakusei (Student)", "video": "videos/student.mp4", "type": "vocab" },
+  { "id": "v_ext04", "front": "大学", "back": "Daigaku (University)", "video": "videos/uni.mp4", "type": "vocab" },
+  { "id": "v_ext05", "front": "勉強", "back": "Benkyou (Study)", "video": "videos/study.mp4", "type": "vocab" },
+  { "id": "v_ext06", "front": "日本語", "back": "Nihongo (Japanese Language)", "video": "videos/jp.mp4", "type": "vocab" },
+  { "id": "v_ext07", "front": "英語", "back": "Eigo (English Language)", "video": "videos/en.mp4", "type": "vocab" },
+  { "id": "v_ext08", "front": "友達", "back": "Tomodachi (Friend)", "video": "videos/friend.mp4", "type": "vocab" },
+  { "id": "v_ext09", "front": "家族", "back": "Kazoku (Family)", "video": "videos/family.mp4", "type": "vocab" },
+  { "id": "v_ext10", "front": "時間", "back": "Jikan (Time)", "video": "videos/time.mp4", "type": "vocab" },
+  { "id": "v_ext11", "front": "今日", "back": "Kyou (Today)", "video": "videos/today.mp4", "type": "vocab" },
+  { "id": "v_ext12", "front": "明日", "back": "Ashita (Tomorrow)", "video": "videos/tomorrow.mp4", "type": "vocab" },
+  { "id": "v_ext13", "front": "昨日", "back": "Kinou (Yesterday)", "video": "videos/yesterday.mp4", "type": "vocab" },
+  { "id": "v_ext14", "front": "朝", "back": "Asa (Morning)", "video": "videos/morning2.mp4", "type": "vocab" },
+  { "id": "v_ext15", "front": "夜", "back": "Yoru (Night)", "video": "videos/night2.mp4", "type": "vocab" },
+  { "id": "v_ext16", "front": "食べる", "back": "Taberu (To eat)", "video": "videos/eat.mp4", "type": "vocab" },
+  { "id": "v_ext17", "front": "飲む", "back": "Nomu (To drink)", "video": "videos/drink.mp4", "type": "vocab" },
+  { "id": "v_ext18", "front": "読む", "back": "Yomu (To read)", "video": "videos/read.mp4", "type": "vocab" },
+  { "id": "v_ext19", "front": "書く", "back": "Kaku (To write)", "video": "videos/write.mp4", "type": "vocab" },
+  { "id": "v_ext20", "front": "聞く", "back": "Kiku (To listen)", "video": "videos/listen.mp4", "type": "vocab" }
+]

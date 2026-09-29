@@ -1,0 +1,137 @@
+:root {
+    --bg-color: #fdfcf0;
+    --paper-color: #ffffff;
+    --primary-color: #1a237e;
+    --accent-color: #c62828;
+    --text-color: #333;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.5s ease;
+}
+
+.stats-container {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.card-scene {
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    box-sizing: border-box;
+    border: 2px solid #eee;
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #f9f9f9;
+}
+
+.char-display {
+    font-size: 8rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.meaning-display {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.controls.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-wrong {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+
+.btn-correct {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+video {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
