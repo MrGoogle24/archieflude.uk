@@ -51,6 +51,7 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +74,7 @@ body {
 }
 
 .char-display {
-    font-size: 8rem;
+    font-size: 6rem;
     margin: 0;
     color: var(--primary-color);
 }
@@ -123,6 +124,34 @@ button {
 .btn-correct {
     background: #c8e6c9;
     color: #2e7d32;
+}
+
+.category-selector {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.cat-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    background: #eee;
+    color: #666;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cat-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.cat-btn:hover:not(.active) {
+    background: #e0e0e0;
 }
 
 button:hover {
