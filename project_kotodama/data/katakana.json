@@ -46,7 +46,7 @@
   { "id": "k45", "front": "ヲ", "back": "wo", "video": "videos/k_wo.mp4", "type": "kana" },
   { "id": "k46", "front": "ン", "back": "n", "video": "videos/k_n.mp4", "type": "kana" },
   { "id": "k_d01", "front": "ガ", "back": "ga", "video": "videos/k_ga.mp4", "type": "kana" },
-  { "id": "k_d02", "front": "ギ", "back": "gi", "video": "videos/k_gi.mp4", "type, "kana" },
+  { "id": "k_d02", "front": "ギ", "back": "gi", "video": "videos/k_gi.mp4", "type": "kana" },
   { "id": "k_d03", "front": "グ", "back": "gu", "video": "videos/k_gu.mp4", "type": "kana" },
   { "id": "k_d04", "front": "ゲ", "back": "ge", "video": "videos/k_ge.mp4", "type": "kana" },
   { "id": "k_d05", "front": "ゴ", "back": "go", "video": "videos/k_go.mp4", "type": "kana" },
